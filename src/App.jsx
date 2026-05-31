@@ -106,7 +106,7 @@ const CATEGORIES = {
 };
 
 function App() {
-
+ 
   const [active, setActive] = useState('All');
   const [emailOpen, setEmailOpen] = useState(false);
   const [phoneOpen, setPhoneOpen] = useState(false);
