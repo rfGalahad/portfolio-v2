@@ -1,0 +1,173 @@
+@import url('https://fonts.googleapis.com/css2?family=Syne:wght@700;800&family=DM+Mono:wght@400;500&family=Outfit:wght@300;400;500&display=swap');
+
+/* ── Card shell ──────────────────────────────────────── */
+.project-card {
+  flex-shrink: 0;
+  position: relative;
+  margin-top: 16px;
+  border-radius: 8px;
+  padding: 22px 22px 18px;
+  width: 100%;
+
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+
+  background: rgba(255, 255, 255, 0.08);
+  border: 1px solid rgba(255, 255, 255, 0.15);
+  backdrop-filter: blur(2px);
+  -webkit-backdrop-filter: blur(2px);
+  transition: border-color 0.3s ease, transform 0.3s ease;
+
+  cursor: pointer;
+  overflow: hidden;
+}
+
+.project-card:hover {
+  border-color: rgba(255, 255, 255, 0.6);
+  transform: translateY(-3px);
+}
+
+/* ── Top row: status badge ───────────────────────────── */
+.project-card .top-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.project-card .status-badge {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-family: 'DM Mono', monospace;
+  font-size: 10px;
+  font-weight: 500;
+  letter-spacing: 0.06em;
+  padding: 3px 9px;
+  border-radius: 20px;
+  background: rgba(16, 185, 129, 0.12);
+  border: 1px solid rgba(16, 185, 129, 0.3);
+  color: #10b981;
+  text-transform: uppercase;
+}
+
+.project-card .status-dot {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: #10b981;
+  animation: status-dot-pulse 2.5s ease-in-out infinite;
+}
+
+@keyframes status-dot-pulse {
+  0%, 100% { opacity: 1; }
+  50%       { opacity: 0.2; }
+}
+
+/* ── Year ────────────────────────────────────────────── */
+.project-card .year {
+  font-family: 'DM Mono', monospace;
+  font-size: 14px;
+  font-weight: 400;
+  color: rgba(180, 200, 220, 0.4);
+  letter-spacing: 0.05em;
+}
+
+.project-card .title-row {
+  display: inline-flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.project-card .title {
+  font-size: 20px;
+  font-weight: 800;
+  color: #f0f6ff;
+}
+
+.project-card .role {
+  font-size: 14px;
+  font-weight: 400;
+  color: #38bdf8;
+  letter-spacing: 0.04em;
+}
+
+/* ── Description ─────────────────────────────────────── */
+.project-card .description {
+  font-size: 14px;
+  font-weight: 300;
+  color: rgba(180, 200, 220, 0.8);
+  line-height: 1.6;
+}
+
+/* ── Divider ─────────────────────────────────────────── */
+.project-card .divider {
+  height: 1px;
+  background: rgba(255, 255, 255, 0.07);
+  margin: 2px 0;
+}
+
+/* ── Tech stack ──────────────────────────────────────── */
+.project-card .tech-stack {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 6px;
+}
+
+.project-card .tech-pill {
+  font-family: 'DM Mono', monospace;
+  font-size: 12px;
+  font-weight: 500;
+  padding: 3px 9px;
+  border-radius: 20px;
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  background: rgba(255, 255, 255, 0.04);
+  color: rgba(180, 200, 220, 0.65);
+  transition: border-color 0.2s, color 0.2s;
+}
+
+.project-card .tech-pill:hover {
+  border-color: rgba(56, 189, 248, 0.4);
+  color: #38bdf8;
+}
+
+/* ── Footer links ────────────────────────────────────── */
+.project-card .footer {
+  display: flex;
+  gap: 8px;
+  margin-top: 2px;
+}
+
+.project-card .link {
+  display: inline-flex;
+  align-items: center;
+  gap: 5px;
+  font-family: 'Outfit', sans-serif;
+  font-size: 12px;
+  font-weight: 500;
+  padding: 6px 14px;
+  border-radius: 8px;
+  text-decoration: none;
+  transition: background 0.2s, color 0.2s;
+}
+
+.project-card .link--live {
+  background: #0ea5e9;
+  color: #fff;
+  border: none;
+}
+
+.project-card .link--live:hover {
+  background: #38bdf8;
+}
+
+.project-card .link--code {
+  background: rgba(255, 255, 255, 0.05);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  color: rgba(180, 200, 220, 0.8);
+}
+
+.project-card .link--code:hover {
+  background: rgba(255, 255, 255, 0.09);
+  color: #f0f6ff;
+}
