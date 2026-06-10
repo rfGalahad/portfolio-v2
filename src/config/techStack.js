@@ -4,6 +4,7 @@ export const TECH_STACK = {
     { icon: 'devicon-html5-plain',        text: 'HTML5' },
     { icon: 'devicon-css3-plain',         text: 'CSS3' },
     { icon: 'devicon-javascript-plain',   text: 'JavaScript' },
+    { icon: 'devicon-typescript-plain',   text: 'TypeScript' },
   ],
   Backend: [
     { icon: 'devicon-nodejs-plain',       text: 'Node.js' },
