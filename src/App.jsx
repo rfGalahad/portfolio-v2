@@ -8,12 +8,14 @@ import SocialLink from './components/SocialLink';
 import EmailDialog from './components/dialogs/EmailDialog';
 import ContactDialog from './components/dialogs/ContactDialog';
 import ResumeDialog from './components/dialogs/ResumeDialog';
+import ProjectDialog from './components/dialogs/ProjectDialog';
 
 import { toSkillItem } from './utils/skills';
 import { PROJECTS } from './config/projects';
 import { TECH_STACK } from './config/techStack';
 import { TECH_STACK_TABS } from './constants/techStack';
 import { useDialog } from './hooks/useDialog';
+
 
 
 function App() {
@@ -23,6 +25,7 @@ function App() {
   const email  = useDialog();
   const phone  = useDialog();
   const resume = useDialog();
+  const project = useDialog();
 
   const allItems = useMemo(() => Object.entries(TECH_STACK).flatMap(([cat, arr]) =>
     arr.map(item => toSkillItem(item, cat))
@@ -65,16 +68,25 @@ function App() {
         open={resume.open} 
         onClose={resume.onClose} 
       />
+
+      <ProjectDialog
+        open={project.open}
+        onClose={project.onClose}
+        project={project.data}
+      />
     
       <div className="container">
           <section className="info-section">
             {/* DEVELOPER INFO */}
             <div className="developer">
               <h1 className="developer-name">Ruther Solloso</h1>
-              <p className="developer-title">Junior Full Stack Developer</p>
+              <p className="developer-title">
+                IT | Cybersecurity | Junior Full-Stack Developer 
+              </p>
               <p className="developer-description">
-                A fresh graduate with experience in web development through internship and government contract work. 
-                Skilled in building responsive web applications using modern technologies.
+                A fresh BSIT graduate with hands-on experience in web development 
+                through internship and government contract work, currently building 
+                foundational knowledge in cybersecurity alongside modern web technologies.
               </p>
             </div> 
       
@@ -115,10 +127,11 @@ function App() {
               <Folder sx={{ fontSize: 22 }} />
               <p className="project-header-title">Projects</p>
             </div>
-            {PROJECTS.map((project) => (
+            {PROJECTS.map((proj) => (
               <ProjectCard
-                key={project.title}
-                {...project}
+                key={proj.title}
+                {...proj}
+                onClick={() => project.onOpen(proj)} 
               />
             ))}
           </section>

@@ -4,8 +4,8 @@ import { Close, Download, Description } from '@mui/icons-material';
 import './ResumeDialog.css';
 
 
-const RESUME_URL = '/Solloso_Resume.pdf';
-const RESUME_FILENAME = 'Ruther_Solloso_Resume.pdf';
+const RESUME_URL = '/resume.pdf';
+const RESUME_FILENAME = 'resume.pdf';
 
 const ResumeDialog = ({ open, onClose }) => {
 

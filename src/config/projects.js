@@ -10,7 +10,15 @@ export const PROJECTS = [
     status: "Live",
     year: "2026",
     stack: ['React', 'Node.js', 'Express', 'MySQL', 'PWA'],
-    link: "https://www.e-tbayatmswdo.com/"
+    link: "https://www.e-tbayatmswdo.com/",
+    image: "/etbayat-screenshot.jpg", // ← add your screenshot here
+    highlights: [
+      "JWT-based authentication & authorization",
+      "Role-Based Access Control (RBAC)",
+      "Offline-capable PWA with service workers",
+      "Automated data analytics & reporting",
+      "Hazard mapping with geospatial data",
+    ],
   },
   {
     title: "Philippine Data Guardians Website",
@@ -22,6 +30,13 @@ export const PROJECTS = [
     status: "Live",
     year: "2025",
     stack: ['React', 'Supabase', 'PostgreSQL', 'Responsive Website'],
-    link: "https://www.phdataguardians.org/"
+    link: "https://www.phdataguardians.org/",
+    image: "/pdg-website-screenshot.jpg", // ← add your screenshot here
+    highlights: [
+      "Supabase auth with row-level security (RLS)",
+      "Admin dashboard with member record management",
+      "Membership registration workflow",
+      "Responsive design across all screen sizes",
+    ],
   }
 ];

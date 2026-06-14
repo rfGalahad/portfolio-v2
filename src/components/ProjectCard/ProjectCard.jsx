@@ -8,12 +8,10 @@ const ProjectCard = ({
   status = "Live",
   year = "2024",
   stack = ["React", "Node.js", "PostgreSQL", "PWA"],
-  link = "https://etbayat.vercel.app/"
+  onClick,
 }) => {
   return (
-    <div 
-      className="project-card" 
-      onClick={() => window.open(link, "_blank")}>
+    <div className="project-card" onClick={onClick}>
 
       {/* Status badge + year */}
       <div className="top-row">
